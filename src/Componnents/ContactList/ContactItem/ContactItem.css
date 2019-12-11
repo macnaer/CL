@@ -1,0 +1,12 @@
+ul li{
+    display: inline-block;
+}
+ul {
+    display: inline-block;
+}
+button{
+    float: right;
+}
+.star{
+    color: rgb(156, 156, 50);
+}
