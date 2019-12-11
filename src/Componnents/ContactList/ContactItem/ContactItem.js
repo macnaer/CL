@@ -9,7 +9,6 @@ class ContactItem extends React.Component {
         name: this.props.name,
         gender: this.props.gender,
         btnRandom: false,
-        favorite: false
     }
 
     onBtnPress = () => {
@@ -31,7 +30,7 @@ class ContactItem extends React.Component {
         }
 
         let btnFavorite = "fa fa-star-o fa-2x star"
-        if (this.state.favorite) {
+        if (this.props.favorite) {
             btnFavorite = "fa fa-star fa-2x star"
         }
 
@@ -67,7 +66,7 @@ class ContactItem extends React.Component {
                                 </li>
 
                             </ul>
-                            <i className={btnFavorite}></i>
+                            <i className={btnFavorite} onClick={this.props.onBtnFavorite} ></i>
                             <button type="button" className={btnStyle} onClick={this.onBtnPress}>Random  Face</button>
                         </div>
                         <hr />
